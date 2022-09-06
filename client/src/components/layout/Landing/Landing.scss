@@ -1,0 +1,125 @@
+$starting-delay: 500ms;
+$reveal-borders-time: 400ms;
+$open-mask-time: 500ms;
+$skew: 10deg;
+$border-size: 0.3em;
+$content-width: 600px;
+$content-height: 350px;
+$timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
+
+@keyframes reveal-mask {
+    from {
+      max-width: 1em + $border-size;
+    }
+    to {
+      max-width: 50e;
+    }
+}
+
+@keyframes reveal-content {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes grow-height {
+    from {
+      height: 0;
+    }
+    to { 
+      height: 100%;
+    }
+}
+
+body {
+  background: #1b6ec6;
+}
+.btn-text{
+    margin-top :20px;
+}
+
+.title {
+  &-container {
+    position: absolute;
+    
+    width: 100%;
+  }
+  
+  &-mask {
+    animation-name: reveal-mask;
+    animation-duration: $open-mask-time;
+    animation-timing-function: $timing-function; 
+    animation-delay: $starting-delay + $reveal-borders-time;
+    animation-fill-mode: both;
+    transition: background 400ms $timing-function;
+    max-width: $content-width;
+    height: $content-height;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto;
+    position: relative;
+    transform: skew(-$skew);
+    cursor: pointer;
+    background: rgba(255,255,255,0.0);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1)
+    }
+    
+    &:before, &:after {
+      animation-name: grow-height;
+      animation-duration: $reveal-borders-time;
+      animation-timing-function: $timing-function;
+      animation-delay: $starting-delay; 
+      animation-fill-mode: both;
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    &:before {
+      border-right: $border-size solid hotpink;
+      top: 0;
+      left: 0;
+    }
+    
+    &:after {
+      border-left: $border-size solid cyan;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &-content {
+    animation-name: reveal-content;
+    animation-duration: 50ms;
+    animation-timing-function: $timing-function;
+    animation-delay: $starting-delay + $reveal-borders-time;
+    animation-fill-mode: both;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: visible;
+    white-space: nowrap;
+    line-height: 2em;
+    font-family: "Montserrat", sans-serif;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+  }
+  
+  &-highlight {
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: "Roboto", sans-serif;
+  }
+}
