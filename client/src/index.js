@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <div className='flex flex-col h-screen justify-between overflow-auto bg-gradient-to-r bg-[rgba(255,152,9,0.85)] via-[rgba(255,152,9,0.9)] to-[rgba(255,152,9,0.99)]'>
+  // bg-gradient-to-r bg-[rgba(255,152,9,0.85)] via-[rgba(255,152,9,0.9)] to-[rgba(255,152,9,0.99)] bg-gray-200 is best
+    <div className='flex flex-col h-screen justify-between bg-gray-200 overflow-auto '>
       <App />
     </div>
   // </React.StrictMode>

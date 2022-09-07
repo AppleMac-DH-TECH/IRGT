@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { Text } from '../../languages/Text/Text';
 const Footer = () => {
     return (
-        <footer className="p-4 bg-[rgb(255,153,9)] bg-opacity-75  rounded-lg text-white shadow  md:px-6 md:py-3 relative">
+        <footer className="p-4 bg-[#0E2144]    text-white shadow  md:px-6 md:py-3 relative">
             <div className="sm:flex sm:items-center sm:justify-between">
                 <a href="#" className="flex items-center mb-4 sm:mb-0">
-                    <img src="/img/logo/logo.png" className="mr-3 h-9 sm:h-11" alt="Investment Logo" />
-                    <span className="self-center text-xl font-semibold whitespace-nowrap">IRGT</span>
+                    <img src="./img/wahedLogo.png" className="mr-3 h-9 sm:h-11" alt="Investment Logo" />
+                    <span className="self-center text-xl font-semibold whitespace-nowrap"></span>
                 </a>
                 <ul className="flex flex-wrap items-center mb-6 text-xl text-white  sm:mb-0">
                     <li>

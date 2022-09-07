@@ -56,10 +56,10 @@ const Calculation = ({ setAlert}) => {
     return (
         <>
             <div className="p-5 relative m-auto">
-                <h1 className="text-white text-3xl text-left font-mono mt-10"><Text  tid={"profitCalc"}/></h1>
+                <h1 className="text-[#0E2144] text-3xl text-left font-mono mt-10"><Text  tid={"profitCalc"}/></h1>
                 <div className=" py-10">
                     <div className="">
-                        <div className="max-w-[500px] w-5/6  text-white text-xl">
+                        <div className="max-w-[500px] w-5/6  text-[#0E2144] text-xl">
                             <div>
                                 <p className="font-mono text-xl"><Text  tid={"investAmount"}/></p>
                                 <input 
@@ -67,14 +67,14 @@ const Calculation = ({ setAlert}) => {
                                     name={"invest"}
                                     placeholder="Investment Amount" 
                                     onChange={onChange}
-                                    className="py-3 px-3 w-full  border border-white bg-transparent mt-2 rounded-bl-3xl rounded-tr-3xl" 
+                                    className="py-3 px-3 w-full  border border-gray-600 bg-transparent mt-2 rounded-bl-3xl rounded-tr-3xl" 
                                 />    
                             </div>
 
                             <div className="grid grid-cols-2 gap-4 mt-5">
                                 <div className=" ">
                                     <input type="button"
-                                        className=" gap-5 text-white text-base  bg-transparent border border-white  w-full hover:border-black hover:text-xl  rounded-lg  px-6 py-3.5 text-center"
+                                        className=" gap-5 text-[#0E2144] text-base  bg-transparent border border-gray-400  w-full hover:border-[#0E2144]  rounded-lg  px-6 py-3.5 text-center"
                                         name="N1"
                                         value={"100-1%"}
                                         percent = "1"
@@ -84,7 +84,7 @@ const Calculation = ({ setAlert}) => {
 
                                 <div className=" ">
                                     <input type="button"
-                                        className=" gap-5 text-white text-base  bg-transparent border border-white  w-full hover:border-black hover:text-xl  rounded-lg  px-6 py-3.5 text-center"
+                                        className=" gap-5 text-[#0E2144] text-base  bg-transparent border border-gray-400  w-full hover:border-[#0E2144]  rounded-lg  px-6 py-3.5 text-center"
                                         name="N2"
                                         percent = "1.5"
                                         value={"500-1.5%"}
@@ -94,7 +94,7 @@ const Calculation = ({ setAlert}) => {
 
                                 <div className=" ">
                                     <input type="button"
-                                        className=" gap-5 text-white text-base  bg-transparent border border-white  w-full hover:border-black hover:text-xl  rounded-lg  px-6 py-3.5 text-center"
+                                        className=" gap-5 text-[#0E2144] text-base  bg-transparent border border-gray-400  w-full hover:border-[#0E2144]  rounded-lg  px-6 py-3.5 text-center"
                                         name="N3-2%"
                                         percent = "2"
                                         value={"1000-2%"}
@@ -104,7 +104,7 @@ const Calculation = ({ setAlert}) => {
 
                                 <div className=" ">
                                     <input type="button"
-                                        className=" gap-5 text-white text-base  bg-transparent border border-white  w-full hover:border-black hover:text-xl  rounded-lg  px-6 py-3.5 text-center"
+                                        className=" gap-5 text-[#0E2144] text-base  bg-transparent border border-gray-400  w-full hover:border-[#0E2144]  rounded-lg  px-6 py-3.5 text-center"
                                         name="N4"
                                         percent = "3"
                                         value={"5000-3%"}

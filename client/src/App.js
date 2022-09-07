@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer/Footer';
 // import Home from './views/Home';
+import Landing from './views/Landing';
 import Login from './views/Login';
 import SignUp from './views/SignUp';
 import Profit from './views/profit/Profit';
@@ -72,7 +73,7 @@ function App() {
   return (
     <>
     <Provider store={store}>
-      <div className="area bg-gradient-to-r bg-orange- via-orange-700 to-orange-800" style={{position : 'absolute'}}>
+      {/* <div className="area bg-gradient-to-r bg-orange- via-orange-700 to-orange-800" style={{position : 'absolute'}}>
         <ul className="circles">
                 <li></li>
                 <li></li>
@@ -85,14 +86,14 @@ function App() {
                 <li></li>
                 <li></li>
         </ul>
-      </div >
+      </div > */}
         <Router>
           <LanguageProvider>
-            <Navbar />
             <Alert />
+            <Navbar />
             <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/login/" element={<Login />} />
+              <Route path="/" element={<Landing />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               {/* User part Router */}
               <Route

@@ -14,8 +14,8 @@
         }
         const authLinks = (
             <>
-            <div className="hidden w-full md:block md:w-auto relative bg-[rgb(255,153,9)]" id="navbar-default">
-                <ul className="flex flex-col p-4 mt-4 bg-transparent items-center rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  ">
+            <div className="hidden w-full md:block md:w-auto relative bg-[#0E2144]" id="navbar-default">
+                <ul className="flex flex-col p-4 mt-4 bg-transparent items-center rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md :font-medium md:border-0  ">
                     <Link to={'/lottery'} className="flex items-center gap-2">
                         
                         <svg class="animate-bounce w-8 h-8 ...">
@@ -53,7 +53,7 @@
             </div>
 
              {/* responsive part */}
-             <div className={` ${ isShow ? "" : "hidden" } bg-[rgb(255,153,9)] absolute left-0 top-0 h-screen w-full z-10`}>
+             <div className={` ${ isShow ? "" : "hidden" } bg-[#0E2144] absolute left-0 top-0 h-screen w-full z-10`}>
              <p className="none sm:hidden text-white text-right pointer m-5 mt-6" onClick={() => toggleModal(false)} >&#9776;</p>
 
              <div className='text-white text-center mt-12'>
@@ -78,24 +78,16 @@
                 
         const normalLink = (
             <>
-            <div className="hidden w-full md:block md:w-auto relative bg-[rgb(255,153,9)]" id="navbar-default">
-                <ul className="flex flex-col p-4 mt-4 bg-transparent rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  ">
-                    {/* <li>
-                        <div  className=" rounded-bl-3xl rounded-tr-3xl  inline-flex justify-center items-center  text-white text-base  bg-transparent border border-blue  w-full  rounded-lg  px-6  text-center hover:border hover:border-blue-500">
-                            <button onClick={() => { logoutFunction()}}  className="w-100 " > <Text tid={"logout"} /></button>
-                        </div>
-                    </li> */}
-                </ul>
-            </div>
-
-            
+                <div>
+                   <h1 className='text-white text-2xl'> Not found</h1>
+                </div>
             </>
         );
 
         const guestLinks = (
             <>
                 {/* {auth.isAuthenticated?console.log(auth.user.role):console.log('')} */}
-            <div className="hidden w-full md:block md:w-auto relative bg-[rgb(255,153,9)]" id="navbar-default">
+            <div className="hidden w-full md:block md:w-auto relative bg-[#0E2144]" id="navbar-default">
                 <ul className="flex flex-col p-4 mt-4 bg-transparent rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  ">
                     <Link to={'/profit'}>
                         <p href="#" className="block py-2 pr-4 pl-3 text-white  rounded md:bg-transparent md:hover:text-blue-700 md:p-0  font-mono" ><Text  tid={'profit'}/></p>
@@ -106,10 +98,13 @@
                     <li>
                         <LanguageSelector />
                     </li>
+                    <Link to={'/login'}>
+                        <p href="#" className="block py-2 pr-4 pl-3 text-white rounded md:bg-transparent  md:hover:text-blue-700 md:p-0  font-mono"><Text  tid={'signIn'}/></p>
+                    </Link>
                 </ul>
             </div>
             {/* responsive part */}
-            <div className={` ${ isShow ? "" : "hidden" } bg-[rgb(255,153,9)] absolute left-0 top-0 h-screen w-full z-10`}>
+                <div className={`${isShow ? "" : "hidden"} bg-[#0E2144] h-auto absolute left-0 top-0  w-full z-10`} style={{paddingBottom : '25px'}}>
                 <p className="none sm:hidden text-white text-right pointer m-5 mt-6" onClick={() => toggleModal(false)} >&#9776;</p>
 
                 <div className='text-white text-center mt-12'>
@@ -129,7 +124,7 @@
 
         const adminLink = (
             <>
-            <div className="hidden w-full md:block md:w-auto relative bg-[rgb(255,153,9)]" id="navbar-default">
+            <div className="hidden w-full md:block md:w-auto relative bg-[#0E2144]" id="navbar-default">
                 <ul className="flex flex-col p-4 mt-4 bg-transparent rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  ">
                     <Link to={'/userManagement'} className="inline-flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -168,7 +163,7 @@
             </div>
 
             {/* responsive part */}
-            <div className={` ${ isShow ? "" : "hidden" } bg-[rgb(255,153,9)] absolute left-0 top-0 h-screen w-full z-10`}>
+            <div className={` ${ isShow ? "" : "hidden" } bg-[#0E2144] absolute left-0 top-0 h-screen w-full z-10`}>
                 <p className="none sm:hidden text-white text-right pointer m-5 mt-6" onClick={() => toggleModal(false)} >&#9776;</p>
 
                 <div className='text-white text-center mt-12'>
@@ -187,22 +182,20 @@
         )
         
         return (
-            <>  
-            <nav className=" border-gray-200 px-2 sm:px-4 py-2.5 rounded  relative  bg-[rgb(255,153,9)] ">
-                <div className="container flex flex-wrap justify-between items-center mx-auto">
-                    <Link to={ (auth.isAuthenticated && auth.user.role == 'user') ? '/transfer' : (auth.isAuthenticated && auth.user.role == 'admin') ? '/userManagement' : '/login' }  className="flex items-center" >
-                        <img src="/img/logo/logo.png" className="mr-3 h-9 sm:h-9" alt="Investment7" />
-                        <span className="self-center text-xl font-semibold whitespace-nowrap ">IRGT</span>
-                    </Link>
-                    <button data-collapse-toggle="navbar-default" type="button" onClick={() => toggleModal(true)} className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  " aria-controls="navbar-default" aria-expanded="false">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" ></path></svg>
-                    </button>
-                    {(auth.isAuthenticated && auth.user.role != "user" && auth.user.role != 'admin') ? normalLink : ((auth.isAuthenticated && auth.user.role == "admin") ? adminLink : ( (auth.isAuthenticated && auth.user.role == "user") ? authLinks : guestLinks) )}
-                </div>
-            </nav>
-                
-              
+            <>
+                <nav className={`border-gray-200 px-2 sm:px-4 py-2.5   relative  bg-[#0E2144] `}>
+                    <div className={`container flex flex-wrap justify-between items-center mx-auto`}>
+                        <Link to={ (auth.isAuthenticated && auth.user.role == 'user') ? '/transfer' : (auth.isAuthenticated && auth.user.role == 'admin') ? '/userManagement' : '/' }  className="flex items-center" >
+                            <img src="./img/wahedLogo.png" className="h-9 md:scale-125"  />
+                            <span className="self-center text-xl font-semibold whitespace-nowrap "></span>
+                        </Link>
+                        <button data-collapse-toggle="navbar-default" type="button" onClick={() => toggleModal(true)} className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  " aria-controls="navbar-default" aria-expanded="false">
+                            <span className="sr-only">Open main menu</span>
+                            <svg className="w-6 h-6" aria4-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" ></path></svg>
+                        </button>
+                        {(auth.isAuthenticated && auth.user.role !== "user" && auth.user.role !== 'admin') ? normalLink : ((auth.isAuthenticated && auth.user.role == "admin") ? adminLink : ( (auth.isAuthenticated && auth.user.role == "user") ? authLinks : guestLinks) )}
+                    </div>
+                </nav>
             </>
         )
     }
