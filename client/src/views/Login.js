@@ -63,12 +63,12 @@ const Login = ({ login  ,auth, setAlert}) => {
                                 />
                             </div>
 
-                             <div  className=" rounded-bl-3xl rounded-tr-3xl  inline-flex justify-center items-center gap-5 text-[#0E2144] text-base  bg-transparent border border-gray-600  w-full hover:border-2 hover:border-[#0E2144] hover:text-2xl  rounded-lg  px-6 py-3.5 text-center mt-10">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+                             <button  className=" rounded-bl-3xl rounded-tr-3xl  inline-flex justify-center items-center gap-5 text-[#0E2144] text-base  bg-transparent border border-gray-600  w-full hover:border-2 hover:border-[#0E2144] hover:text-2xl  rounded-lg  px-6 py-3.5 text-center mt-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8"  fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                                 <path  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                                 </svg>
                                 <button type={'submit'} className="text-xl text-[#0E2144]" > <strong><Text tid={"login"} /></strong></button>
-                            </div>
+                            </button>
 
                             <p className="text-[#0E2144] text-center mt-5"><Text tid={"donotaccount"}/> &nbsp; <span className="text-[#F4BC1D]"><Link to="/signup"><strong className="font-mono text-2xl text-[#0E2144]"><Text tid={"signup"} /></strong></Link></span></p>
                         </form>

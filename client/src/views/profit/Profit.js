@@ -9,7 +9,7 @@ const Profit = () => {
         <>
             <div className="">
                 <div className="container grid grid-cols-1 gap-4 m-auto md:grid md:grid-cols-2 relative p-4 ">
-                    <Link to={'/calculation'} className="max-w-sm shadow-2xl bg-transparent  rounded-3xl border border-gray-200  m-auto text-center hover:scale-105 duration-500 ease-in-out">
+                    <Link to={'/calculation'} className="max-w-sm shadow-2xl bg-transparent  rounded-3xl border border-gray-200  m-auto text-center hover:scale-105 duration-700 ease-in-out">
                         <a href="#">
                             <img className="object-fill h-72 w-64 m-auto p-2 " src="img/profit/slide-new-1.png" alt=""  />
                         </a>
@@ -27,7 +27,7 @@ const Profit = () => {
                         </div>
                     </Link>
 
-                    <Link to={'/Learnmore'} className="max-w-sm shadow-2xl bg-transparent  rounded-3xl border border-gray-200  m-auto text-center hover:scale-105 duration-500 ease-in-out">
+                    <Link to={'/Learnmore'} className="max-w-sm shadow-2xl bg-transparent  rounded-3xl border border-gray-200  m-auto text-center hover:scale-105 duration-700 ease-in-out">
                             <a href="#">
                                 <img className="object-scale-down h-72 w-64 m-auto p-2" src="img/profit/slide-new-3.png" alt="" />
                             </a>

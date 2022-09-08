@@ -105,18 +105,17 @@ const LotterySection = ({ setAlert, getBalance, profile: { balance }, timer,GetT
                 
                 
             {/* Start Button */}
-                { timer == "Empty"?<button onClick={() => { AddTimer(_profit)}} class="b animate-pulse mx-auto h-16 w-64 flex justify-center items-center rounded-full">
-                <div class="i h-16 w-64 bg-orange-600 items-center rounded-2xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out sm:w-64">
+                { timer == "Empty"?<button onClick={() => { AddTimer(_profit)}} className="b animate-pulse mx-auto h-16 w-64  flex justify-center items-center rounded-full">
+                <div class="i h-16 w-64 bg-[#0E2144] items-center rounded-2xl shadow-2xl cursor-pointer text-[#0E2144] absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out sm:w-64">
                 </div>
                 <a class="text-center text-white font-semibold z-10 pointer-events-none"><Text tid={'letsgetstart'}/></a>
-                
                 </button>
                     :''}
         
                 {/* Time Countdown  */}
-                {timer != "Empty" && (<h1 className='text-center text-5xl mt-5 font-mono'>{currentTime}</h1>)}
+                {timer != "Empty" && (<h1 className='text-center text-[#0E2144] text-5xl mt-5 font-mono'>{currentTime}</h1>)}
                 
-                <form className="max-w-[500px] w-5/6  text-white text-xl m-auto" onSubmit={sendSubmit}>
+                <form className="max-w-[500px] w-5/6  text-[#0E2144] text-xl m-auto" onSubmit={sendSubmit}>
                             <div className="mt-5">
                                 <p className="font-mono text-xl text-center"><Text tid={'chooseNumber'}/></p>
                                 <input 
@@ -128,10 +127,10 @@ const LotterySection = ({ setAlert, getBalance, profile: { balance }, timer,GetT
                             }}
                                     name="number"
                                     placeholder="" 
-                                    className="py-3 px-3 w-full bg-transparent border border-white mt-2 rounded-bl-3xl rounded-tr-3xl" 
+                                    className="py-3 px-3 w-full border-gray-600 hover:border hover:border-[#0E2144] bg-transparent border  mt-2 rounded-bl-3xl rounded-tr-3xl" 
                                 />
                             </div>
-                            <button type="submit" className="rounded-bl-3xl rounded-tr-3xl mt-5 inline-flex justify-center items-center gap-5 text-white text-xl  bg-transparent border border-white  w-full hover:border-black hover:text-2xl  rounded-lg  px-6 py-3.5 text-center">
+                            <button type="submit" className="rounded-bl-3xl rounded-tr-3xl  inline-flex justify-center items-center gap-5 text-[#0E2144] text-xl  bg-transparent border border-gray-600  w-full hover:border-2 hover:border-[#0E2144]   rounded-lg  px-6 py-3.5 text-center mt-10">
                                 <b><Text tid={"confirm"} /></b>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
