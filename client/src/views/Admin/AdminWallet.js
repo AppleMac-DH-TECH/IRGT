@@ -16,8 +16,8 @@ const AdminWallet = ({ getWallets , admin_wallet : { wallets } }) => {
         <>
         <div class="overflow-x-auto overflow-auto relative shadow-md sm:rounded-lg m-auto text-xl mt-10">
                 
-            <table class="w-full text-xl  text-white font-mono text-center hover:shadow-2xl ">
-                <thead class="text-xl bg-transparent text-white uppercase ">
+            <table class="w-full text-xl  text-[#0E2144] font-mono text-center hover:shadow-2xl ">
+                <thead class="text-xl bg-transparent text-[#0E2144] uppercase ">
                     <tr>
                         <th scope="col" class="py-3 px-6 grid item-center gap-2 text-center">
                             <p><Text tid={'walletaddress'}/></p>

@@ -37,7 +37,7 @@ const MyTeam = ({ getAccounts, deleteAccount , account: { accounts } , auth }) =
                             <p class="mb-3 font-normal text-[#0E2144] text-xl">{account.date}</p>
                         </div>
                         <div class="py-4 px-6 w-full">
-                                    <button onClick={() => { deleteAccount(account._id) }} class="rounded-bl-3xl rounded-tr-3xl  text-[#0E2144] text-xl  bg-transparent border border-gray-600 w-full md:w-1/2 hover:border-2 hover:border-[#0E2144]  rounded-lg py-2 text-center "><Text tid={'delete'} /></button>
+                            <button onClick={() => { deleteAccount(account._id) }} class="rounded-bl-3xl rounded-tr-3xl  text-[#0E2144] text-xl  bg-transparent border border-gray-600 w-full md:w-1/2 hover:border-2 hover:border-[#0E2144]  rounded-lg py-2 text-center "><Text tid={'delete'} /></button>
                         </div>  
                     </a> 
                 </div>

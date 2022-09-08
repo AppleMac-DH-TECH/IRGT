@@ -20,9 +20,6 @@ router.get('/', auth, async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
-
-
-
 // @route    POST api/auth
 // @desc     Authenticate user & get token
 // @access   Public
@@ -38,7 +35,7 @@ router.post(
 
     const { username, password } = req.body;
 
-    //Check admin
+    // Check admin
     // const _user =await User.findOne({role : 'admin'});
     // console.log("admin : " , _user);
 

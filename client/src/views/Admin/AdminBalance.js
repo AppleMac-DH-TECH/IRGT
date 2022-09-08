@@ -26,27 +26,21 @@ const AdminBalance = ({ getBalance, setBalance}) => {
     }
 
     return (
-        <div className='relative'>
-            <div  class="grid place-items-center overflow-y-auto overflow-x-hidden m-auto  top-0 right-0 left-0 w-full md:inset-0 h-modal md:h-full">
-                <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                    <div class="relative  rounded-lg shadow bg-transparent hover:bg-[rgba(255,152,9,0.6)]">
-                        <div class="py-6 px-6 lg:px-8">
-                            <h3 class="mb-4 text-xl font-medium text-white text-center"><Text tid={'balance'}/> & <Text tid={'profit'}/></h3>
-                            <form class="space-y-6" onSubmit={onSubmit}>
-                                <div>
-                                    <label for="email" class="block mb-2 text-xl font-medium text-white"><Text tid={'balance'}/></label>
-                                    <input type="text" name="balance" onChange={onChange}  class=" border bg-transparent text-white border-gray-300  text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="" required />
-                                </div>
-                                <div>
-                                    <label for="password" class="block mb-2 text-xl font-medium text-white "><Text tid={'profit'}/></label>
-                                    <input type="text" name="profit" onChange={onChange}   placeholder="" class=" bg-transparent  border text-white border-gray-300  text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
-                                </div>
-                                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-xl font-medium rounded-lg  px-5 py-2.5 text-center "><Text tid={'confirm'}/></button>
-                            </form>
-                        </div>
+        <div class="text-center p-5 md:p-0 w-full  text-[#0E2144] m-auto">
+            <div class="p-20 max-w-sm shadow-2xl bg-transparent  rounded-3xl   m-auto text-center hover:scale-105 duration-700 ease-in-out">
+                <h3 class="mb-4 text-xl font-medium text-[#0E2144] text-center"><Text tid={'balance'}/> & <Text tid={'profit'}/></h3>
+                <form class="space-y-6" onSubmit={onSubmit}>
+                    <div>
+                        <label for="email" class="block mb-2 text-xl font-medium text-[#0E2144]"><Text tid={'balance'}/></label>
+                        <input type="text" name="balance" onChange={onChange}  class=" border bg-transparent text-[#0E2144] border-gray-300  text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="" required />
                     </div>
-                </div>
-            </div> 
+                    <div>
+                        <label for="password" class="block mb-2 text-xl font-medium text-[#0E2144] "><Text tid={'profit'}/></label>
+                        <input type="text" name="profit" onChange={onChange}   placeholder="" class=" bg-transparent  border text-[#0E2144] border-gray-300  text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
+                    </div>
+                    <button type="submit" class="rounded-bl-3xl rounded-tr-3xl  inline-flex justify-center items-center gap-5 text-[#0E2144] text-xl  bg-transparent border border-gray-600  w-full hover:border-2 hover:border-[#0E2144]  rounded-lg  px-6 py-3.5 text-center mt-10"><Text tid={'confirm'}/></button>
+                </form>
+            </div>
         </div>
     )
 }

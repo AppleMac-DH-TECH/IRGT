@@ -17,23 +17,23 @@ const AdminTeam = ({ getTeams , admin_team : { teams } }) => {
         <>
         
         <div className='relative n-container' >
-        <h1 className='text-center  bg-transparent text-white text-2xl p-5 '><Text tid={'teamlist'}/></h1>
+        <h1 className='text-center  bg-transparent break-words text-[#0E2144] text-2xl p-5 '><Text tid={'teamlist'}/></h1>
                 {teams &&  teams._teams.map((team, index) => (
                 <div key={index}>
-                    <div href="#" class="flex flex-col items-center  rounded-lg m-auto w-full border hover:shadow-2xl md:flex-row mt-5">
+                    <div href="#" class=" flex flex-col items-center   md:flex-row mt-5 w-full shadow-2xl bg-transparent  rounded-3xl border border-gray-200  m-auto text-center hover:scale-105 duration-700 ease-in-out">
                         <img class="object-cover w-36 h-auto rounded-t-lg md:h-auto md:w-36 md:rounded-none md:rounded-l-lg p-5" src="/img/avatar/teammember.png" alt="" />   
                         <div class="flex flex-col justify-between p-4 leading-normal">
                             <div className='inline-flex items-baseline '>
                                 <label className='text-black text-2xl'><Text tid={'accountname'}/>:</label>
-                                <p class="mb-2   tracking-tight text-white text-xl">{team.accountName}</p>
+                                <p class="mb-2   tracking-tight text-[#0E2144] text-xl">{team.accountName}</p>
                             </div>
                             <div className='inline-flex items-baseline'> 
                                 <label className='text-black text-2xl'><Text tid={'username'}/>:</label>
-                                <p class="mb-3 font-normal text-white text-xl">{teams.username}</p>
+                                <p class="mb-3 font-normal text-[#0E2144] text-xl">{teams.username}</p>
                             </div>
                             <div className='inline-flex items-baseline'> 
                                 <label className='text-black text-2xl'><Text tid={'jointime'}/>:</label>
-                                <p class="mb-3 font-normal text-white text-xl">{team.date}</p>
+                                <p class="mb-3 font-normal text-[#0E2144] text-xl">{team.date}</p>
                             </div>
                         </div> 
                     </div>
