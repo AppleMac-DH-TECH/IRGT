@@ -64,7 +64,10 @@ const LotterySection = ({ setAlert, getBalance, profile: { balance }, timer,GetT
     useEffect(() => {       
         GetTimer(_profit);
         getBalance();
-        if (_profit == 1 && balance.balance < 100) {
+        if (balance == null) { 
+            setAlert("Please connect your wallet");
+            navigate('/lottery');
+        }else if (_profit == 1 && balance.balance < 100) {
             setAlert("You should have got minium 100$");
             navigate('/lottery');
         } else if (_profit == 1.5 && balance.balance < 500) { 

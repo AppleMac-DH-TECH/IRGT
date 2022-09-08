@@ -35,7 +35,7 @@ const  AddAccount = ({ addTeamAccount  ,setAlert}) => {
                 <p className='text-[#0E2144] text-xl text-left'><Text tid={'addaccountdes'}/></p>
                 <div className=" py-10">
                     <div className="">
-                        <form onSubmit={onSubmit} className="max-w-[500px] w-full  text-[#0E2144] text-xl">
+                        <form onSubmit={onSubmit} className="max-w-[800px] w-full  text-[#0E2144] text-xl">
                             <div>
                                 <p className="font-mono text-xl"><Text tid={'accountname'}/></p>
                                 <input 
