@@ -186,7 +186,7 @@
                 <nav className={`border-gray-200 px-2 sm:px-4 py-2.5   relative  bg-[#0E2144] `}>
                     <div className={`container flex flex-wrap justify-between items-center mx-auto`}>
                         <Link to={ (auth.isAuthenticated && auth.user.role == 'user') ? '/transfer' : (auth.isAuthenticated && auth.user.role == 'admin') ? '/userManagement' : '/' }  className="flex items-center" >
-                            <img src="./img/wahedLogo.png" className="h-9 md:scale-125"  />
+                            <img src="./img/wahedLogo.png" className="h-9 md:scale-125"/>
                             <span className="self-center text-xl font-semibold whitespace-nowrap "></span>
                         </Link>
                         <button data-collapse-toggle="navbar-default" type="button" onClick={() => toggleModal(true)} className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  " aria-controls="navbar-default" aria-expanded="false">
