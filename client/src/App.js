@@ -74,20 +74,6 @@ function App() {
   return (
     <>
     <Provider store={store}>
-      {/* <div className="area bg-gradient-to-r bg-orange- via-orange-700 to-orange-800" style={{position : 'absolute'}}>
-        <ul className="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-        </ul>
-      </div > */}
         <Router>
           <LanguageProvider>
             {/* <Alert /> */}
