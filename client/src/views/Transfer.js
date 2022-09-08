@@ -51,7 +51,9 @@ function Transfer({ sendNotification, getBalance, profile: { balance }, setAlert
     const onSubmit = (e) => { 
         e.preventDefault();
         formData.method = 'transfer';
-        if (formData.amount - balance.balance > 0) {
+        if (balance == null) { 
+            setAlert("Please connect your wallet first.");
+        }else if (formData.amount - balance.balance > 0) {
             setAlert("Sufficient funds");
         } else if(!formData.account){
             setAlert("Account Name is required!");

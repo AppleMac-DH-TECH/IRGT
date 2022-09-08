@@ -42,7 +42,7 @@ const Wallet = ({ getWallet, deleteWallet, wallet: { wallet} , auth }) => {
                                         {wallet.address}
                                     </td>
                                     <td class="py-4 px-6">
-                                        <button onClick={() => { deleteWallet(wallet._id) }} className="rounded-bl-3xl rounded-tr-3xl  text-[#0E2144] text-base  bg-transparent border border-gray-600 w-full md:w-1/2 hover:border-2 hover:border-[#0E2144]  rounded-lg py-2 text-center ">Delete</button>
+                                        <button onClick={() => { deleteWallet(wallet._id)}} className="rounded-bl-3xl rounded-tr-3xl  text-[#0E2144] text-base  bg-transparent border border-gray-600 w-full md:w-1/2 hover:border-2 hover:border-[#0E2144]  rounded-lg py-2 text-center ">Delete</button>
                                     </td>
                                 </tr> : ''}
                         </tbody>

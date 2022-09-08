@@ -1,3 +1,4 @@
+// import { toast } from 'react-toastify';
 import api from '../utils/api';
 import { setAlert } from './alert';
 import {
@@ -48,7 +49,10 @@ export const register = (formData) => async (dispatch) => {
     });
     dispatch(loadUser());
 
-    dispatch(setAlert('Registered Successfully!'));
+    dispatch(
+      setAlert('Registered Successfully!')
+      // toast.info("success")
+    );
 
   } catch (err) {
     const errors = err.response.data.errors;
@@ -76,6 +80,7 @@ export const login = (username, password) => async (dispatch) => {
     });
 
     dispatch(loadUser());
+    dispatch(setAlert("Login Success"))
   } catch (err) {
     const errors = err.response.data.errors;
 
@@ -100,7 +105,7 @@ export const adminSetting = (formData) => async (dispatch) => {
       payload: res.data
     });
 
-    dispatch(setAlert("Admin assword changed successfully"));
+    dispatch(setAlert("Admin password changed successfully"));
   } catch (err) {
     const errors = err.response.data.errors;
 

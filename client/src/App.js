@@ -51,6 +51,7 @@ import AdminTeam from './views/Admin/AdminTeam';
 import AdminWallet from './views/Admin/AdminWallet';
 import AdminBalance from './views/Admin/AdminBalance';
 import Notification from './views/Admin/Notification';
+import { ToastContainer } from "react-toastify";
 function App() {
 
   useEffect(() => {
@@ -89,8 +90,9 @@ function App() {
       </div > */}
         <Router>
           <LanguageProvider>
-            <Alert />
+            {/* <Alert /> */}
             <Navbar />
+            <ToastContainer />
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
