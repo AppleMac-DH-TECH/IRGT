@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto lg:my-3" />
             <span className="block  text-white  sm:text-center">© 2022 <a href="#" className="">IRGT</a>. <Text tid={"alright"} />.
-                <p className=' sm:text-center'><Text tid={'contact'}/> &nbsp; +971-56-687 71 76 info@support-cpinvestment.com</p>
+                <p className=' sm:text-center'><Text tid={'contact'}/> &nbsp; +971566877176 support@waheedasiainvest.com</p>
             </span>
             
         </footer>

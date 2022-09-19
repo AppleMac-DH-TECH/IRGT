@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Text } from '../components/languages/Text/Text';
 
 const Landing = () => { 
   return (
@@ -8,31 +9,22 @@ const Landing = () => {
     <div className='relative'>
       <div className=" bg-[#0E2144] w-full shadow-lg  px-20   md:w-full md:navbar md:shadow-lg overflow-hidden">
         <div className=' md:w-3/4 md:m-auto '>  
-            {/* <div className='text-white container text-center p-20  md:flex md:align-items-center md:justify-between md:p-20 '>
-                <a href='#' className='text-5xl pt-5 md:pt-0'>
-                <img src='./img/wahedLogo.png' className='mx-auto scale-[3] md:scale-100'/>
-                </a>
-                <div className='text-xl pt-5 '>
-                Russian | Bahasa Indonesia
-                </div>
-            </div> */}
-
           <div className='text-white container  md:flex md:align-items-center md:justify-between md:px-20 md:pt-20 '>
             <div className='text-xl  md:pt-0 p-5'>
               <div className='text-white text-5xl font-mono' style={{float : 'left'}}>
                 <strong className='text-blue-500 break-all'>Wahed</strong>  <strong className='text-white'> + Khabib</strong>
-                <div><strong >join forces</strong></div>
+                  <div><strong ><Text tid={'joinforce'}/></strong></div>
               </div>
 
               <div className='pt-10' style={{float : 'left'}}>
                   <p className='text-base'>
-                    When you’re on a mission to fight financial inequality,
+                    <Text tid={'top1'}/>
                   </p>
-                  <p className='text-base'>it takes a Champion to lead the way.</p>
+                  <p className='text-base'><Text tid={'top2'}/></p>
                   <p className='text-base'>
-                  We are proud to announce <label className='text-blue-500 text-2xl'> Khabib Nurmagomedov </label>, UFC World Champion and BBC Sports Personality of the year 2020,
+                  <Text tid={'top3'}/> <label className='text-blue-500 text-2xl'> Khabib Nurmagomedov </label><Text tid={'top4'}/>
                   </p>
-                  <p className='text-base'>along with Team Khabib as our brand ambassadors.</p>
+                  <p className='text-base'><Text tid={'top5'}/></p>
               </div>
             </div>
             <div className='text-xl pt-5 '>
@@ -46,22 +38,22 @@ const Landing = () => {
     {/* Description section start */}
     <div className='mt-10 p-10 md:p-10'>
         <p className='text-center  font-mono text-[#0E2144] text-4xl  '>
-          What we’ll be doing with Khabib
+          <Text tid={'middle1'}/>
         </p>
         <p className='text-center text-xl  font-mono mt-5 text-gray-400 pt-2'>
-            Khabib is the people's champion who is working to help get out our message.
+          <Text tid={'middle2'}/>
         </p>
         <p className='text-center text-xl  font-mono mt-2 text-gray-400 pt-2'>
-            This is about making people realise that they can do more with their money, and we can
+         <Text tid={'middle3'}/>
         </p>
         <p className='text-center text-xl  font-mono mt-2 text-gray-400 pt-2'>
-          make the world a better place through ethical investing and finance.
+          <Text tid={'middle4'}/>
         </p>
         <p className='text-center text-xl  font-mono mt-2 text-gray-400 pt-2'>
-            Islam Makhachev, Zubaira Tukhugov, Umar Nurmagomedov will also become brand 
+          <Text tid={'middle5'}/>
         </p>
         <p className='text-center text-xl  font-mono mt-2 text-gray-400 pt-2'>
-        ambassadors and use their platforms to help spread financial literacy.
+          <Text tid={'middle6'}/>
         </p>
       </div>
       {/* Description section end */}
@@ -69,7 +61,7 @@ const Landing = () => {
       {/* Form section start */}
       <div className='mt-10 p-10 md:p-10'> 
         <p className='text-center  font-bold text-[#0E2144] text-4xl'>
-          How you can join our mission
+            <Text tid={'bottom1'}/>
         </p>
         <div className='grid grid-cols-1 md:grid md:grid-cols-2 p-2 md:px-44 md:pt-10'>
           <div>
@@ -77,10 +69,10 @@ const Landing = () => {
           </div>
           <div>
             <div>
-              <p className='text-center text-xl  font-mono  text-gray-400 '>As we expand to more countries such as </p>
-              <p className='text-center text-xl  font-mono  text-gray-400 '>Indonesia, Nigeria and Kazakhstan, sign up below </p>
-              <p className='text-center text-xl  font-mono  text-gray-400 '>for updates and future giveaways of signed Team </p>
-              <p className='text-center text-xl  font-mono  text-gray-400 '>Khabib merchandise.</p>
+              <p className='text-center text-xl  font-mono  text-gray-400 '><Text tid={'bottom2'}/> </p>
+              <p className='text-center text-xl  font-mono  text-gray-400 '><Text tid={'bottom3'}/></p>
+              <p className='text-center text-xl  font-mono  text-gray-400 '><Text tid={'bottom4'}/></p>
+              <p className='text-center text-xl  font-mono  text-gray-400 '><Text tid={'bottom5'}/></p>
             </div>
             {/* Form Element section start */}
             <form>
@@ -88,7 +80,7 @@ const Landing = () => {
               <input type='text' placeholder='input2' className='p-3 border-[#0E2144] border w-80 flex mx-auto mt-5 rounded-tr-2xl rounded rounded-bl-2xl hover:border hover:border-[#0E2120] '/>
               <input type='text' placeholder='input3' className='p-3 border-[#0E2144] border w-80 flex mx-auto mt-5 rounded-tr-2xl rounded rounded-bl-2xl hover:border hover:border-[#0E2120] '/>
               <button className='p-3 border-[#0E2144]  w-80 justify-center  mx-auto mt-5 rounded-tr-2xl flex  bg-green-600 rounded rounded-bl-2xl hover:bg-green-700  rounded-br-2xl rounded-tl-2xl scale-105'>
-                Submit
+                  <p><Text tid={'submit'}/></p>
               </button>
             </form>
             {/* Form Element section end  */}
@@ -100,9 +92,9 @@ const Landing = () => {
       {/* let's connect section start */}
       <div className='grid grid-cols-1 p-10 pt-5 md:grid md:grid-cols-2 md:px-44 md:p-20  md:mx-auto'>
         <div className='p-5'>
-          <p className='text-left font-bold text-[#0E2144] text-3xl '>Let's connect</p>
-          <p className='text-left text-xl  font-mono  text-gray-400 pt-2'>Follow us on social as </p>
-          <p className='text-left text-xl  font-mono  text-gray-400 pt-2'>we launch our global campaign in the coming months</p>
+          <p className='text-left font-bold text-[#0E2144] text-3xl '><Text tid={'last1'}/></p>
+          <p className='text-left text-xl  font-mono  text-gray-400 pt-2'><Text tid={'last2'}/></p>
+          <p className='text-left text-xl  font-mono  text-gray-400 pt-2'><Text tid={'last3'}/></p>
         </div>
         <div className='flex align-items-center justify-between px-10 md:px-40 md:pt-0 pt-5'>
           <div>
@@ -127,41 +119,23 @@ const Landing = () => {
           <div>
             <div className='pt-5'>
               <p className='text-left  font-bold text-[#0E2144] text-2xl '>
-                About us
+                <Text tid={'last4'}/>
               </p>
-              <p className='text-left text-xl  font-mono  text-gray-400 mt-5'>Wahed is an ethical investment platform - bridging the </p>
-              <p className='text-left text-xl  font-mono  text-gray-400 '>wealth gap through values, finance and technology. </p>
-              <p className='text-left text-xl  font-mono  text-gray-400 mt-10'>Find out more about our product and services, see</p>
-              <p className='text-left text-xl  font-mono  text-gray-400 '><a href='#' className='text-gray-600 '> wahedinvest.com </a>and for full terms and conditions. </p>
+              <p className='text-left text-xl  font-mono  text-gray-400 mt-5'><Text tid={'last5'}/></p>
+              <p className='text-left text-xl  font-mono  text-gray-400 '><Text tid={'last6'}/></p>
+              <p className='text-left text-xl  font-mono  text-gray-400 mt-10'><Text tid={'last7'}/></p>
+              <p className='text-left text-xl  font-mono  text-gray-400 '><a href='#' className='text-gray-600 '> wahedinvest.com </a><Text tid={'last8'}/></p>
             </div>
             {/* Form Element section start */}
             <form>
               <button className='p-4 border-[#0E2144]  w-80 justify-center  mx-auto mt-5 rounded-tr-2xl left  bg-green-600 rounded rounded-bl-2xl hover:bg-green-700  rounded-br-2xl rounded-tl-2xl scale-105'>
-                Return to Homepage
+                <p><Text tid={'last9'}/></p>
               </button>
             </form>
             {/* Form Element section end  */}
           </div>
         </div>
       </div>
-      {/* About us section end */}
-
-      {/* Footer section start */}
-      {/* <div className='mt-10 p-10 md:p-10'>
-        <div className='p-2 md:px-44 divide-y-2'>
-          <strong className='text-[#0E2144] font-bold font-mono'> DISCLAIMERS </strong>
-          <div className='flex align-items-center justify-between mt-5 pt-5 '>
-            <div><strong className='text-[#0E2144] font-bold font-mono p-2 md:p-0'> WAHED INVEST ENTITIES </strong></div>
-            <div><p className='text-left text-base  font-mono  text-gray-400 p-2 md:p-0'>Refer to this <strong className='text-blue-600 font-bold'>link</strong> for the US entity, and this <strong className='text-blue-600 font-bold'>link</strong> for the UK entity</p> </div> 
-          </div>
-
-          <div className='flex align-items-center justify-between mt-5'>
-            <div><p className='text-left text-base  font-mono  text-gray-400 '> © 2021 Wahed Invest Ltd | All rights reserved     </p></div>
-            <div></div> 
-          </div>
-        </div>
-      </div> */}
-    {/* Footer section end */}
     </div>
     </>
   )
